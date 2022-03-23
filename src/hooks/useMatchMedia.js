@@ -1,6 +1,6 @@
 // 
 // useMatchMedia.js
-// Switch between components when a specific media query is reached by the users display.
+// Hook to switch between components when a specific media query is reached by the users display.
 // 
 
 import { useEffect, useMemo, useState } from 'react';
