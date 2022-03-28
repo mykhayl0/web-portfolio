@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.aboutpage-img-title-wrapper {
+  position: relative;
+  text-align: end;
+  padding-right: 0.625rem;
+  margin-bottom: $title-big-margins__mobile-small;
+
+  .title {
+    position: absolute;
+    bottom: -2.4375rem;
+    margin: 0;
+  }
+}
+
+.aboutpage__about-me {
+  color: $brand-color__swatch-lightgrey;
+  font-weight: 300;
+  font-size: 1.5rem;
+  p {
+    margin: 0 0 $content-breaks__mobile-small 0;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}

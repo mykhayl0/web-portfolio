@@ -1,0 +1,10 @@
+@import "../../variables";
+
+.homepage-intro__mobile p {
+  color: $brand-color__swatch-lightgrey;
+  font-weight: 300;
+  margin: 0;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  font-size: 1.5625rem;
+}

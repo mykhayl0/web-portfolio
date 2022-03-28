@@ -1,0 +1,10 @@
+@import-normalize;
+@import "../../variables";
+
+body {
+  font-family: mr-eaves-sans, sans-serif;
+  font-style: normal;
+  background-color: $brand-color__swatch-black;
+  padding: 0.75rem;
+  margin: 0;
+}

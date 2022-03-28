@@ -1,0 +1,143 @@
+@import "../../variables";
+
+@keyframes skills-bubble__open-scroll-animation {
+  from {
+    transform: translateY(0);
+    margin-bottom: 1rem;
+  }
+  to {
+    transform: translateY(85px);
+    margin-bottom: 200px;
+  }
+}
+
+@keyframes skills-bubble__close-scroll-animation {
+  from {
+    transform: translateY(85px);
+    margin-bottom: 200px;
+  }
+  to {
+    transform: translateY(0);
+    margin-bottom: 1rem;
+  }
+}
+
+.skills-bubble__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  &.is-open,
+  &.is-closing {
+    margin-bottom: 200px;
+    transform: translateY(85px);
+  }
+
+  &.is-open {
+    animation: skills-bubble__open-scroll-animation 0.4s ease-in-out;
+
+    .skills-bubble__items {
+      opacity: 1;
+    }
+  }
+
+  &.is-closing {
+    animation: skills-bubble__close-scroll-animation 0.4s ease-in-out;
+    animation-delay: 0.4s;
+  }
+}
+
+.skills-bubble__container {
+  display: inline-block;
+  position: relative;
+}
+
+.skills-bubble__main-container {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes skills-bubble__pulse {
+  0% {
+    transform: scale(0.95);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+.skills-bubble__main {
+  animation: skills-bubble__pulse 2s ease-in-out infinite;
+  background-color: $brand-color__swatch-red;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+}
+
+.skills-bubble__main-content {
+  font-family: mr-eaves-sans, sans-serif;
+  text-transform: uppercase;
+  color: $brand-color__swatch-lightgrey;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.skills-bubble__items {
+  height: 60px;
+  left: 50%;
+  list-style-type: none;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease-in-out;
+  width: 60px;
+}
+
+.skills-bubble__item {
+  height: inherit;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: inherit;
+}
+
+.skills-bubble__item-btn-wrapper {
+  display: flex;
+  height: inherit;
+  justify-content: center;
+  width: inherit;
+}
+
+.skills-bubble__item-btn {
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.skills-bubble__item-icon {
+  display: block;
+  height: 35px;
+  margin: 0 auto 5px;
+  width: 35px;
+  object-fit: contain;
+}
+
+.skills-bubble__item-name {
+  display: block;
+  color: $brand-color__swatch-lightgrey;
+}

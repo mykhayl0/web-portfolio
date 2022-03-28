@@ -1,0 +1,6 @@
+@import "../../variables";
+
+.box-shadow {
+  -webkit-box-shadow: 10px -10px 0px 0px $brand-color__swatch-grey;
+  box-shadow: 10px -10px 0px 0px $brand-color__swatch-grey;
+}
