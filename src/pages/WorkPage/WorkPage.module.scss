@@ -1,0 +1,7 @@
+@import "../../variables";
+
+.work-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: $content-breaks__mobile-small;
+}

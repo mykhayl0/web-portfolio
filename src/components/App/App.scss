@@ -1,6 +1,10 @@
 @import-normalize;
 @import "../../variables";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: mr-eaves-sans, sans-serif;
   font-style: normal;

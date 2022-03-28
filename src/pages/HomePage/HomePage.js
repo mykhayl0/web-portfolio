@@ -19,7 +19,7 @@ export default function HomePage() {
         This Is
       </p>
 
-      <Title className="aboutpage-title" size="big">
+      <Title size="big">
         My
         <br />
         Khay
@@ -27,7 +27,7 @@ export default function HomePage() {
         Lo.
       </Title>
 
-      <Button link="http://localhost:3000/work">Discover</Button>
+      <Button link="http://localhost:3000/about">Discover</Button>
     </section>
   );
 }

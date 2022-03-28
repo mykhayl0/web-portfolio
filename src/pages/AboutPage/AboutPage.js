@@ -55,7 +55,7 @@ export default function AboutPage() {
       </section>
 
       <section className={classNames(styles["aboutpage__skills"])}>
-        <Title size="small">Skills</Title>
+        <Title size="small">Technical Skills</Title>
 
         <SkillsBubbleGroup>
           <SkillsBubble {...developmentSkills} />

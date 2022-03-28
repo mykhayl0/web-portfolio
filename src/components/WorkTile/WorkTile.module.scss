@@ -1,0 +1,49 @@
+@import "../../variables";
+
+.work-tile {
+  background-color: $brand-color__swatch-lightgrey;
+  width: 17.25rem;
+  height: 17.25rem;
+  margin: 0 0.625rem 0 auto;
+  box-shadow: 0.625rem -0.625rem 0px 0px $brand-color__swatch-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: 0.3s ease-in-out;
+  padding: 6rem 0 2rem;
+  text-decoration: none;
+
+  &:hover {
+    transform: translate(0.625rem, -0.625rem);
+    box-shadow: none;
+    background-color: $brand-color__swatch-red;
+
+    .work-tile__project-title {
+      color: $brand-color__swatch-lightgrey;
+    }
+
+    .work-tile__language {
+      color: $brand-color__swatch-lightgrey;
+    }
+  }
+}
+
+.work-tile__project-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $brand-color__swatch-darkgrey;
+  padding-left: 2rem;
+  line-height: 0.7;
+  transition: 0.3s ease-in-out;
+}
+
+.work-tile__language {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: $brand-color__swatch-darkgrey;
+  text-transform: uppercase;
+  padding-left: 2rem;
+  transition: 0.3s ease-in-out;
+}
