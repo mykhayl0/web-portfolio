@@ -26,7 +26,7 @@ export default function ThankYou() {
         <br />
         Mykhaylo.
       </p>
-      <Button link="http://localhost:3000/">Go Home</Button>
+      <Button internalPath="/">Go Home</Button>
     </>
   );
 }

@@ -20,7 +20,7 @@ export default function InProgress() {
         <br />
         Check back soon for something amazing.
       </p>
-      <Button link="/">Go Home</Button>
+      <Button internalPath="/">Go Home</Button>
     </>
   );
 }

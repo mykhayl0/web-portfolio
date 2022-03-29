@@ -27,7 +27,7 @@ export default function HomePage() {
         Lo.
       </Title>
 
-      <Button link="/about">Discover</Button>
+      <Button internalPath="/about">Discover</Button>
     </section>
   );
 }
