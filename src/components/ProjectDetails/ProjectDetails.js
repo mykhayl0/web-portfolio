@@ -23,10 +23,10 @@ export default function ProjectDetails({ languages, repoLink, projectURL }) {
         </a>
       </div>
       <div className={classNames(styles["button-wrapper"])}>
+        <Button link={"/work"}>Go Back</Button>
         <Button link={projectURL} newTab={"_blank"}>
           Result
         </Button>
-        <Button link={"/work"}>Go Back</Button>
       </div>
     </section>
   );
