@@ -15,7 +15,7 @@ export default function ThankYou() {
   return (
     <>
       <Title size="medium">Yes.</Title>
-      <p className={classNames(styles["thankspage__text"])}>
+      <p className={styles["thankspage__text"]}>
         You have good taste, and more goodness is coming your way.
         <br />
         <br />
