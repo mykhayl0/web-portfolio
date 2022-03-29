@@ -24,8 +24,8 @@ export default function SkillsBubbleGroup({ children }) {
         {
           ...menu,
           remove() {
-            removeFromGroup(menu);
-            return removeFn.call(menu);
+            removeFromGroup(this);
+            return removeFn.call(this);
           },
         }
       );

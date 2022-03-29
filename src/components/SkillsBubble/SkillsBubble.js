@@ -5,14 +5,7 @@
 
 import "./SkillsBubble.styles.scss";
 
-import {
-  useEffect,
-  useRef,
-  useMemo,
-  useContext,
-  useState,
-  useCallback,
-} from "react";
+import { useEffect, useRef, useMemo, useContext, useCallback } from "react";
 
 import Context from "./context";
 import EnhancedBloomingMenu from "./EnhancedBloomingMenu";
@@ -36,12 +29,11 @@ const addSharedClassNames = function (item) {
 // Construct and control the skill bubbles using the props passed.
 export default function SkillsBubble({
   category,
+  endAngle,
   skills,
   startAngle,
-  endAngle,
 }) {
   const { getGroup, addToGroup } = useContext(Context);
-  const [menu, setMenu] = useState(null);
   const wrapperRef = useRef(null);
 
   const uniqueClassPrefix = useMemo(
@@ -81,7 +73,6 @@ export default function SkillsBubble({
       wrapperElement.classList.add("is-closing");
     };
 
-    setMenu(menu);
     menu.render();
 
     document

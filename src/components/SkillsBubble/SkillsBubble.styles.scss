@@ -2,39 +2,37 @@
 
 @keyframes skills-bubble__open-scroll-animation {
   from {
-    transform: translateY(0);
-    margin-bottom: 1rem;
+    padding: 0;
   }
   to {
-    transform: translateY(85px);
-    margin-bottom: 200px;
+    padding: 110px 0;
   }
 }
 
 @keyframes skills-bubble__close-scroll-animation {
   from {
-    transform: translateY(85px);
-    margin-bottom: 200px;
+    padding: 110px 0;
   }
   to {
-    transform: translateY(0);
-    margin-bottom: 1rem;
+    padding: 0;
   }
 }
 
 .skills-bubble__wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+
+  & + & {
+    margin-top: 10px;
+  }
 
   &.is-open,
   &.is-closing {
-    margin-bottom: 200px;
-    transform: translateY(85px);
+    padding: 110px 0;
   }
 
   &.is-open {
-    animation: skills-bubble__open-scroll-animation 0.4s ease-in-out;
+    animation: skills-bubble__open-scroll-animation 0.2s ease-in-out;
 
     .skills-bubble__items {
       opacity: 1;
@@ -43,7 +41,6 @@
 
   &.is-closing {
     animation: skills-bubble__close-scroll-animation 0.4s ease-in-out;
-    animation-delay: 0.4s;
   }
 }
 
