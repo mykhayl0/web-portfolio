@@ -118,7 +118,15 @@ export default function SkillsBubble({
   const animationEndHandler = useCallback(function (event) {
     switch (event.animationName) {
       case "skills-bubble__open-scroll-animation":
-        event.currentTarget.scrollIntoView({ behavior: "smooth" });
+        window.scrollTo({
+          top:
+            event.currentTarget.offsetTop +
+            event.currentTarget.offsetHeight / 2 -
+            window.innerHeight / 2,
+          behavior: "smooth",
+        });
+
+        // event.currentTarget.scrollIntoView({ behavior: "smooth" });
         break;
 
       case "skills-bubble__close-scroll-animation":
