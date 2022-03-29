@@ -11,6 +11,7 @@ import AboutPage from "../../pages/AboutPage";
 import WorkPage from "../../pages/WorkPage/WorkPage";
 import ContactPage from "../../pages/ContactPage";
 import ThankYou from "../../pages/ThankYou";
+import InProgress from "../InProgress/InProgress";
 import MovieDatabase from "../../pages/SingleWorks/MovieDatabase";
 import Footer from "../Footer";
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/work" element={<WorkPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/in-progress" element={<InProgress />} />
 
         <Route path="/kino-movies" element={<MovieDatabase />} />
       </Routes>
