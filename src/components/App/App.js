@@ -1,6 +1,7 @@
 import "./App.scss";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 import HeaderMobile from "../HeaderMobile";
 import MatchMedia from "../MatchMedia";
@@ -11,8 +12,18 @@ import WorkPage from "../../pages/WorkPage/WorkPage";
 import ContactPage from "../../pages/ContactPage";
 import ThankYou from "../../pages/ThankYou";
 import MovieDatabase from "../../pages/SingleWorks/MovieDatabase";
+import Footer from "../Footer";
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(
+    function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    [pathname]
+  );
+
   return (
     <>
       <MatchMedia mediaQuery="(max-width: 10000px)">
@@ -28,6 +39,8 @@ function App() {
 
         <Route path="/kino-movies" element={<MovieDatabase />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import styles from "./ContactPage.module.scss";
 import classNames from "classnames";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/Button";
 import Title from "../../components/Title";
@@ -15,10 +16,32 @@ function checkNameValidity(inputElement) {
 
 export default function ContactPage() {
   const nameInputRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     checkNameValidity(nameInputRef.current);
   }, []);
+
+  const formSubmitHandler = useCallback(
+    async function (event) {
+      event.preventDefault();
+      const formData = new FormData(event.currentTarget);
+
+      await fetch(
+        "https://public.herotofu.com/v1/00c39a20-ada9-11ec-b83f-8f17e10d6288",
+        {
+          method: "post",
+          body: formData,
+        }
+      );
+
+      navigate("/thank-you", {
+        replace: false,
+        state: { formSubmitted: true },
+      });
+    },
+    [navigate]
+  );
 
   return (
     <>
@@ -29,10 +52,7 @@ export default function ContactPage() {
         business days.
       </p>
 
-      <form
-        action="https://public.herotofu.com/v1/00c39a20-ada9-11ec-b83f-8f17e10d6288"
-        method="post"
-      >
+      <form onSubmit={formSubmitHandler}>
         <div className={classNames(styles["contactpage__inputs-wrapper"])}>
           <div className={classNames(styles["contactpage__user-inputs"])}>
             <label htmlFor="name">Your Name.</label>
