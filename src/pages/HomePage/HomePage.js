@@ -27,7 +27,7 @@ export default function HomePage() {
         Lo.
       </Title>
 
-      <Button link="http://localhost:3000/about">Discover</Button>
+      <Button link="/about">Discover</Button>
     </section>
   );
 }
