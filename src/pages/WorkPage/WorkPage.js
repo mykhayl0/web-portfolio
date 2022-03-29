@@ -17,12 +17,14 @@ export default function WorkPage() {
         <WorkTile
           projectTitle={"Web\nPortfolio"}
           language={"React, Sass"}
-          source="/"
+          source="/in-progress"
+          state={{ accessAllowed: true }}
         />
         <WorkTile
           projectTitle={"Laika Dog\nWalking"}
           language={"WordPress, WooCommerce"}
-          source="/"
+          source="/in-progress"
+          state={{ accessAllowed: true }}
         />
       </section>
     </>
