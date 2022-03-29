@@ -1,0 +1,70 @@
+@import "../../mixins";
+@import "../../variables";
+
+.header-desktop__wrapper {
+  padding: 1rem 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: $brand-color__swatch-darkgrey;
+  margin: -2.5rem -4rem 11.25rem;
+}
+
+.header-desktop__mykhaylo-logo-wrapper {
+  line-height: 0;
+  position: relative;
+
+  span {
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    bottom: 0;
+    color: $brand-color__swatch-red;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 0;
+    font-weight: 700;
+  }
+}
+
+.header-desktop__mykhaylo-logo {
+  width: 4.0625rem;
+  height: 4.0625rem;
+}
+
+.header-desktop__nav-items {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+
+  span {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: $brand-color__swatch-lightgrey;
+    line-height: 0;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: $brand-color__swatch-lightgrey;
+    transition: 0.4s color ease-in-out;
+    line-height: 0;
+
+    &:hover {
+      color: $brand-color__swatch-red;
+    }
+  }
+}
+
+.header-desktop__profile-icons {
+  width: 25px;
+  height: auto;
+  line-height: 0;
+}
