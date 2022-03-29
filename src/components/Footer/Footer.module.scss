@@ -1,0 +1,36 @@
+@import "../../variables";
+
+footer {
+  margin-top: 4.625rem;
+  border-top: 0.0625rem solid $brand-color__swatch-red;
+  padding-top: $content-breaks__mobile-small;
+}
+
+.footer__media-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: $content-breaks__mobile-small/2;
+
+  img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+
+.footer__mykhaylo-logo {
+  width: 1.875rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer__copyright {
+  display: block;
+  margin-top: $content-breaks__mobile-small/2;
+  color: $brand-color__swatch-lightgrey;
+  font-weight: 100;
+  text-align: center;
+  font-size: $font-size-p__mobile;
+  text-transform: uppercase;
+}

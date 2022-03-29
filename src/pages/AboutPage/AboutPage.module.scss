@@ -16,7 +16,7 @@
 .aboutpage__about-me {
   color: $brand-color__swatch-lightgrey;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: $font-size-p__mobile;
   p {
     margin: 0 0 $content-breaks__mobile-small 0;
   }
