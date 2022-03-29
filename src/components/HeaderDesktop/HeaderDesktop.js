@@ -1,13 +1,15 @@
 import styles from "./HeaderDesktop.module.scss";
 import classNames from "classnames";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import mykhayloLogo from "../../assets/mykhaylo-logo.svg";
 import linkedinIcon from "../../assets/icons/site-icons/linkedin-icon.svg";
 import githubIcon from "../../assets/icons/development-icons/github-icon.svg";
 
 export default function HeaderDesktop() {
+  const { pathname } = useLocation();
+
   return (
     <>
       <header className={styles["header-desktop__wrapper"]}>
@@ -24,10 +26,36 @@ export default function HeaderDesktop() {
         </Link>
 
         <div className={styles["header-desktop__nav-items"]}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/work">Work</Link>
-          <Link to="/contact">Contact</Link>
+          <Link
+            className={pathname === "/" ? styles["current-page"] : styles[""]}
+            to="/"
+          >
+            Home
+          </Link>
+          <Link
+            className={
+              pathname === "/about" ? styles["current-page"] : styles[""]
+            }
+            to="/about"
+          >
+            About
+          </Link>
+          <Link
+            className={
+              pathname === "/work" ? styles["current-page"] : styles[""]
+            }
+            to="/work"
+          >
+            Work
+          </Link>
+          <Link
+            className={
+              pathname === "/contact" ? styles["current-page"] : styles[""]
+            }
+            to="/contact"
+          >
+            Contact
+          </Link>
           <span>|</span>
           <a
             className={styles["header-desktop__profile-icons"]}

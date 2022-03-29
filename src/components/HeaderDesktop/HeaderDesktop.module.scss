@@ -11,6 +11,33 @@
   margin: -2.5rem -4rem 11.25rem;
 }
 
+@include mqMin($laptopSml) {
+  .header-desktop__wrapper {
+    margin-left: -10rem;
+    margin-right: -10rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@include mqMin($desktopMed) {
+  .header-desktop__wrapper {
+    margin-left: -18.75rem;
+    margin-right: -18.75rem;
+    padding-left: 18.75rem;
+    padding-right: 18.75rem;
+  }
+}
+
+@include mqMin($desktopLrg) {
+  .header-desktop__wrapper {
+    margin-left: -25rem;
+    margin-right: -25rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
+  }
+}
+
 .header-desktop__mykhaylo-logo-wrapper {
   line-height: 0;
   position: relative;
@@ -58,6 +85,10 @@
     line-height: 0;
 
     &:hover {
+      color: $brand-color__swatch-red;
+    }
+
+    &.current-page {
       color: $brand-color__swatch-red;
     }
   }
