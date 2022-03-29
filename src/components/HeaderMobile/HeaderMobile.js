@@ -8,7 +8,7 @@ import "./HeaderMobile.styles.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import NavMobile from "../NavMobile";
+import NavMobile from "../NavMobile/";
 import mykhayloLogo from "../../assets/mykhaylo-logo.svg";
 
 export default function HeaderMobile() {
