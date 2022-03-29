@@ -10,6 +10,7 @@ import AboutPage from "../../pages/AboutPage";
 import WorkPage from "../../pages/WorkPage/WorkPage";
 import ContactPage from "../../pages/ContactPage";
 import ThankYou from "../../pages/ThankYou";
+import MovieDatabase from "../../pages/SingleWorks/MovieDatabase";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path="/work" element={<WorkPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/thank-you" element={<ThankYou />} />
+
+        <Route path="/kino-movies" element={<MovieDatabase />} />
       </Routes>
     </>
   );

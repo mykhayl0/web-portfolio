@@ -10,9 +10,9 @@ export default function WorkPage() {
       <Title size="medium">Work.</Title>
       <section className={classNames(styles["work-tiles"])}>
         <WorkTile
-          projectTitle={"Movie\nDatabase"}
+          projectTitle={"Kino\nMovies"}
           language={"React, Sass"}
-          source="/"
+          source="/kino-movies"
         />
         <WorkTile
           projectTitle={"Web\nPortfolio"}
@@ -20,7 +20,7 @@ export default function WorkPage() {
           source="/"
         />
         <WorkTile
-          projectTitle={"Laika\n Dog Walking"}
+          projectTitle={"Laika Dog\nWalking"}
           language={"WordPress, WooCommerce"}
           source="/"
         />

@@ -30,13 +30,14 @@
 }
 
 .work-tile__project-title {
+  color: $brand-color__swatch-darkgrey;
   font-size: 2.5rem;
   font-weight: 800;
-  text-transform: uppercase;
-  color: $brand-color__swatch-darkgrey;
-  padding-left: 2rem;
   line-height: 0.7;
+  padding-left: 2rem;
+  text-transform: uppercase;
   transition: 0.3s ease-in-out;
+  white-space: pre-wrap;
 }
 
 .work-tile__language {
