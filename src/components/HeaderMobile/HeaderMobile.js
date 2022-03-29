@@ -5,13 +5,15 @@
 
 import "./HeaderMobile.styles.scss";
 
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import NavMobile from "../NavMobile/";
 import mykhayloLogo from "../../assets/mykhaylo-logo.svg";
 
 export default function HeaderMobile() {
+  const { pathname } = useLocation();
+
   // Control the state of the navigation when it's open. By default it's closed (false).
   const [navOpen, setNavOpen] = useState(false);
 
@@ -27,11 +29,24 @@ export default function HeaderMobile() {
     }
   };
 
+  const navMobileClickHandler = (event) => {
+    if (event.target.tagName?.toLowerCase() === "a") {
+      setNavOpen(false);
+    }
+  };
+
   // Control the state of the navigation when the user selects a link.
   // Ex: user selects Home, the navigation panel contracts.
   const closeNavHandler = () => {
     setNavOpen(false);
   };
+
+  useEffect(
+    function () {
+      setNavOpen(false);
+    },
+    [pathname]
+  );
 
   return (
     <>
@@ -47,11 +62,20 @@ export default function HeaderMobile() {
         </Link>
 
         {/* Control whether the NavMobile component is open or closed, based on its attribute values. */}
-        <NavMobile open={navOpen} onClose={closeNavHandler} />
+        <NavMobile
+          open={navOpen}
+          onClick={navMobileClickHandler}
+          onClose={closeNavHandler}
+        />
 
         <button className="hamburger-button" onClick={hamburgerClickHandler}>
           <div className="hamburger-icon">
-            <input className="hamburger-icon__selected" type="checkbox" />
+            <input
+              checked={navOpen}
+              className="hamburger-icon__selected"
+              readOnly={true}
+              type="checkbox"
+            />
             <div>
               <span></span>
               <span></span>

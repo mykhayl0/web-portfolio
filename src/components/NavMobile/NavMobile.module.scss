@@ -1,0 +1,69 @@
+@import "../../variables";
+
+.current-page.current-page {
+  color: $brand-color__swatch-red;
+}
+
+.content-dark-overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0d0000b5;
+  position: fixed;
+  z-index: 3;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+
+  &.closed {
+    opacity: 0;
+  }
+
+  &.open {
+    opacity: 1;
+  }
+}
+
+.no-pointer-no-overflow {
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.nav-open {
+  background-color: $brand-color__swatch-lightgrey;
+  height: 100vh;
+  padding-top: 4rem;
+  pointer-events: all;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 0.5s transform ease-in-out;
+  width: calc(100vw - 30%);
+  z-index: 10;
+
+  &.closed {
+    transform: translateX(100%);
+  }
+
+  &.open {
+    transform: translateX(0%);
+  }
+}
+
+.nav-items {
+  li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $brand-color__swatch-darkgrey;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: 0.2s ease-in-out;
+    font-size: 2.25rem;
+
+    &:hover {
+      color: $brand-color__swatch-red;
+    }
+  }
+}
