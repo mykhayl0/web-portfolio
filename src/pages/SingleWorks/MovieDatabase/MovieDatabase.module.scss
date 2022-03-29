@@ -1,0 +1,11 @@
+@import "../../../variables";
+
+.movie-database-details {
+  font-size: $font-size-p__mobile;
+  color: $brand-color__swatch-lightgrey;
+  margin: 0 0 $content-breaks__mobile-small 0;
+
+  p {
+    margin: 0;
+  }
+}
