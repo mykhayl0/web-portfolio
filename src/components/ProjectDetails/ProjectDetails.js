@@ -1,0 +1,33 @@
+import styles from "./ProjectDetails.module.scss";
+import classNames from "classnames";
+import Button from "../Button";
+
+import githubIcon from "../../assets/icons/development-icons/github-icon.svg";
+
+export default function ProjectDetails({ languages, repoLink, projectURL }) {
+  return (
+    <section className={classNames(styles["project-details-wrapper"])}>
+      <span className={classNames(styles["project-languages"])}>
+        {languages}
+      </span>
+      <div className={classNames(styles["details-wrapper"])}>
+        <a target="_blank" href={repoLink}>
+          <div className={classNames(styles["github-wrapper"])}>
+            <img
+              className={classNames(styles["github-icon"])}
+              src={githubIcon}
+              alt="GitHub Repository"
+            />
+            <div className={classNames(styles.arrow, styles.bounce)}></div>
+          </div>
+        </a>
+      </div>
+      <div className={classNames(styles["button-wrapper"])}>
+        <Button link={projectURL} newTab={"_blank"}>
+          Result
+        </Button>
+        <Button link={"/work"}>Go Back</Button>
+      </div>
+    </section>
+  );
+}
