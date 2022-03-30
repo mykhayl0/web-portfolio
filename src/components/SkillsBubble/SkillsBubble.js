@@ -1,8 +1,3 @@
-//
-// SkillsBubble.js
-// Construct a new BloomingMenu and render a set of skills via props.
-//
-
 import "./SkillsBubble.styles.scss";
 
 import { useEffect, useRef, useMemo, useContext, useCallback } from "react";
@@ -62,7 +57,7 @@ export default function SkillsBubble({
       wrapperElement.classList.add("is-open");
 
       getGroup().forEach(function (item) {
-        if (item !== menu) {
+        if (item !== menu && item.state.isOpen) {
           item.close();
         }
       });

@@ -1,4 +1,5 @@
 @import "../../variables";
+@import "../../mixins";
 
 .current-page.current-page {
   color: $brand-color__swatch-red;
@@ -9,6 +10,8 @@
   height: 100vh;
   background-color: #0d0000b5;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 3;
   transition: opacity 0.5s ease-in-out;
   pointer-events: none;
@@ -45,6 +48,30 @@
 
   &.open {
     transform: translateX(0%);
+  }
+}
+
+@include mqMin($mobileMed) {
+  .nav-open {
+    width: calc(100vw - 35%);
+  }
+}
+
+@include mqMin($mobileLrg) {
+  .nav-open {
+    width: calc(100vw - 40%);
+  }
+}
+
+@include mqMin($tabletSml) {
+  .nav-open {
+    width: calc(100vw - 50%);
+  }
+}
+
+@include mqMin($tabletLrg) {
+  .nav-open {
+    width: calc(100vw - 60%);
   }
 }
 

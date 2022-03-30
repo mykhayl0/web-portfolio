@@ -1,18 +1,10 @@
-//
-// NavMobile.js
-// Control the navigation panel on mobile screens.
-//
-
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 import styles from "./NavMobile.module.scss";
 import classNames from "classnames";
 
-import linkedinIcon from "../../assets/icons/site-icons/linkedin-icon-dark.svg";
-import githubIcon from "../../assets/icons/development-icons/github-icon-dark.svg";
-
-// NavMobile accepts two parameters, open and onClose.
+// NavMobile is rendered on screens smaller than 899px. Rendering Link components.
 export default function NavMobile({ open, ...props }) {
   // Only activate effect if the parameter "open" changes.
   useEffect(() => {

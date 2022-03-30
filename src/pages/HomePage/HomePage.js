@@ -1,6 +1,5 @@
 //
 // HomePage.js
-// Render the Home page.
 //
 
 import styles from "./HomePage.module.scss";
@@ -8,26 +7,37 @@ import styles from "./HomePage.module.scss";
 import Button from "../../components/Button";
 import Title from "../../components/Title";
 
+import { Helmet } from "react-helmet";
+
 export default function HomePage() {
   return (
-    <section className={styles["homepage-intro__mobile"]}>
-      <p>
-        Front End Web Developer,
-        <br />
-        Web Designer,
-        <br />
-        This Is
-      </p>
+    <>
+      <Helmet>
+        <title>mykhaylo.ca | Home</title>
+      </Helmet>
 
-      <Title size="big">
-        My
-        <br />
-        Khay
-        <br />
-        Lo.
-      </Title>
+      <section className={styles["homepage__intro"]}>
+        <p>
+          Front-End Web Developer,
+          <br />
+          Web Designer,
+          <br />
+          This Is
+        </p>
 
-      <Button internalPath="/about">Discover</Button>
-    </section>
+        <Title size="big">
+          My
+          <br className={styles["homepage__mobile-breaks"]} />
+          Khay
+          <br className={styles["homepage__mobile-breaks"]} />
+          Lo.
+        </Title>
+        <span className={styles["homepage__pronunciation"]}>
+          Pronunciation [mee-KHA-eel-o]
+        </span>
+
+        <Button internalPath="/about">Discover</Button>
+      </section>
+    </>
   );
 }

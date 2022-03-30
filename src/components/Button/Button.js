@@ -3,6 +3,8 @@ import classNames from "classnames";
 
 import { Link } from "react-router-dom";
 
+// Render a prestyled Button, accepting className's, external links,
+// control opening new browser tabs, internal Router paths, and button text.
 export default function Button({
   className,
   link,
@@ -10,6 +12,7 @@ export default function Button({
   internalPath,
   children,
 }) {
+  // If internalPath exists, then render a Link component.
   if (internalPath) {
     return (
       <Link
@@ -19,6 +22,8 @@ export default function Button({
         {children}
       </Link>
     );
+    // Otherwise, if no internalPath exists, then render a regular button wrapped
+    // wrapping an href.
   } else {
     return (
       <button className={classNames(styles["pill-button"], className)}>

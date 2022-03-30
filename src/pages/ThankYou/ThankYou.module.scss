@@ -1,9 +1,16 @@
 @import "../../variables";
+@import "../../mixins";
 
 .thankspage__text {
   font-size: 1.25rem;
   color: $brand-color__swatch-lightgrey;
-  font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 $content-breaks__mobile-small 0;
+}
+
+@include mqMin($laptopSml) {
+  .thankspage__text {
+    font-weight: 800;
+    font-size: 2rem;
+  }
 }

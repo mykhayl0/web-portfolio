@@ -1,4 +1,5 @@
 @import "../../variables";
+@import "../../mixins";
 
 .work-tile {
   background-color: $brand-color__swatch-lightgrey;
@@ -8,7 +9,7 @@
   box-shadow: 0.625rem -0.625rem 0px 0px $brand-color__swatch-grey;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   transition: 0.3s ease-in-out;
   padding: 6rem 0 2rem;
@@ -25,6 +26,133 @@
 
     .work-tile__language {
       color: $brand-color__swatch-lightgrey;
+    }
+  }
+}
+
+@include mqMin($mobileMed) {
+  .work-tile {
+    margin: 0 auto;
+  }
+}
+
+@include mqMin($mobileLrg) {
+  .work-tile {
+    width: 22.3125rem;
+    height: 22.3125rem;
+
+    .work-tile__project-title {
+      font-size: 3rem;
+    }
+
+    .work-tile__language {
+      font-size: 2rem;
+    }
+  }
+}
+
+@include mqMin($tabletSml) {
+  .work-tile {
+    width: 12.5rem;
+    height: 12.5rem;
+    padding-top: 3rem;
+
+    .work-tile__project-title {
+      font-size: 2rem;
+      padding-left: 1rem;
+    }
+
+    .work-tile__language {
+      padding-left: 1rem;
+      font-size: 1rem;
+    }
+
+    &:nth-of-type(1) {
+      margin: 0 0 0 auto;
+    }
+
+    &:nth-of-type(2) {
+      margin: 0;
+    }
+
+    &:nth-of-type(3) {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+@include mqMin($tabletLrg) {
+  .work-tile.work-tile {
+    margin: 0 auto;
+  }
+}
+
+@include mqMin($laptopSml) {
+  .work-tile {
+    width: 14.5rem;
+    height: 14.5rem;
+    padding-top: 3rem;
+
+    .work-tile__project-title {
+      font-size: 2.35rem;
+      padding-left: 1rem;
+    }
+
+    .work-tile__language {
+      padding-left: 1rem;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@include mqMin($laptopLrg) {
+  .work-tile {
+    width: 17.5rem;
+    height: 17.5rem;
+    padding: 6rem 0 2rem;
+
+    .work-tile__project-title {
+      font-size: 2.5rem;
+      padding-left: 2rem;
+    }
+
+    .work-tile__language {
+      padding-left: 2rem;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@include mqMin($desktopMed) {
+  .work-tile {
+    width: 24.5rem;
+    height: 24.5rem;
+
+    .work-tile__project-title {
+      font-size: 3.5rem;
+      padding-left: 3rem;
+    }
+
+    .work-tile__language {
+      padding-left: 3rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@include mqMin($desktopLrg) {
+  .work-tile {
+    width: 30.5rem;
+    height: 30.5rem;
+
+    .work-tile__project-title {
+      font-size: 4rem;
+      padding-left: 5rem;
+    }
+
+    .work-tile__language {
+      padding-left: 5rem;
+      font-size: 2rem;
     }
   }
 }

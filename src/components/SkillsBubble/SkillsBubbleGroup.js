@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useRef } from "react";
 
+import styles from "./SkillsBubbleGroup.module.scss";
 import { Provider } from "./context";
 
 export default function SkillsBubbleGroup({ children }) {
@@ -48,5 +49,9 @@ export default function SkillsBubbleGroup({ children }) {
     [addToGroup]
   );
 
-  return <Provider value={contextValue}>{children}</Provider>;
+  return (
+    <Provider value={contextValue}>
+      <div className={styles["skills-bubble-group"]}>{children}</div>
+    </Provider>
+  );
 }

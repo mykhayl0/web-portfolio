@@ -4,6 +4,9 @@ import Button from "../Button";
 
 import githubIcon from "../../assets/icons/development-icons/github-icon.svg";
 
+// ProjectDetails completes the beginning structure of single project pages.
+// Auto fills information that is passed through props, such as the project languages,
+// the GitHub repository link, and the external project URL link.
 export default function ProjectDetails({ languages, repoLink, projectURL }) {
   return (
     <section className={classNames(styles["project-details-wrapper"])}>

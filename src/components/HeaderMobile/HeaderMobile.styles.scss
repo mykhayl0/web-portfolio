@@ -1,4 +1,5 @@
 @import "../../variables";
+@import "../../mixins";
 
 .header-menu-mobile {
   display: flex;
@@ -23,14 +24,53 @@
   padding: 0;
   pointer-events: all;
   z-index: 10;
+  position: fixed;
+  right: 5px;
 
   .hamburger-icon {
     transform: scale(1.5);
   }
 }
 
-:root {
-  --bar-bg: #212529;
+@include mqMin($mobileMed) {
+  .hamburger-button {
+    right: calc(1.25rem - 5px);
+  }
+}
+@include mqMin($mobileLrg) {
+  .hamburger-button {
+    right: calc(1.5rem - 5px);
+  }
+}
+@include mqMin($tabletSml) {
+  .hamburger-button {
+    right: calc(2.5rem - 5px);
+  }
+}
+@include mqMin($laptopSml) {
+  .hamburger-button {
+    right: calc(4rem - 5px);
+  }
+}
+@include mqMin($laptopMed) {
+  .hamburger-button {
+    right: calc(6rem - 5px);
+  }
+}
+@include mqMin($laptopLrg) {
+  .hamburger-button {
+    right: calc(10rem - 5px);
+  }
+}
+@include mqMin($desktopMed) {
+  .hamburger-button {
+    right: calc(18.75rem - 5px);
+  }
+}
+@include mqMin($desktopLrg) {
+  .hamburger-button {
+    right: calc(25rem - 5px);
+  }
 }
 
 .hamburger-icon {

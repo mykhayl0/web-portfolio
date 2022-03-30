@@ -2,6 +2,7 @@
 import classNames from "classnames";
 import styles from "./Title.module.scss";
 
+// Generate Title components based on the prop.size value.
 export default function Title(props) {
   if (props.size === "big") {
     return (

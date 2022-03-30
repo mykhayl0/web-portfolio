@@ -3,9 +3,10 @@ import "./App.scss";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
-import HeaderMobile from "../HeaderMobile";
 import MatchMedia from "../MatchMedia";
 
+import HeaderMobile from "../HeaderMobile";
+import HeaderDesktop from "../HeaderDesktop";
 import HomePage from "../../pages/HomePage";
 import AboutPage from "../../pages/AboutPage";
 import WorkPage from "../../pages/WorkPage/WorkPage";
@@ -27,22 +28,33 @@ function App() {
 
   return (
     <>
-      <MatchMedia mediaQuery="(max-width: 10000px)">
+      {/* Use MatchMedia to control whether HeaderMobile or HeaderDesktop is rendered. */}
+      <MatchMedia mediaQuery="(max-width: 899px)">
         <HeaderMobile />
       </MatchMedia>
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/work" element={<WorkPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/thank-you" element={<ThankYou />} />
-        <Route path="/in-progress" element={<InProgress />} />
+      <MatchMedia mediaQuery="(min-width: 900px)">
+        <HeaderDesktop />
+      </MatchMedia>
 
-        <Route path="/kino-movies" element={<MovieDatabase />} />
-      </Routes>
+      <div className="app__flex-wrapper">
+        <div>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/work" element={<WorkPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/in-progress" element={<InProgress />} />
 
-      <Footer />
+            <Route path="/kino-movies" element={<MovieDatabase />} />
+          </Routes>
+        </div>
+
+        <div>
+          <Footer />
+        </div>
+      </div>
     </>
   );
 }

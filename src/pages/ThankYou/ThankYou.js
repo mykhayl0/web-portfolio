@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import styles from "./ThankYou.module.scss";
 import { useLocation, Navigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import Title from "../../components/Title";
 import Button from "../../components/Button";
@@ -14,6 +15,9 @@ export default function ThankYou() {
 
   return (
     <>
+      <Helmet>
+        <title>mykhaylo.ca | Thank You</title>
+      </Helmet>
       <Title size="medium">Yes.</Title>
       <p className={styles["thankspage__text"]}>
         You have good taste, and more goodness is coming your way.

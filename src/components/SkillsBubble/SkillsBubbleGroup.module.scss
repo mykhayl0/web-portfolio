@@ -1,0 +1,54 @@
+@import "../../mixins";
+
+$gap: 10px;
+
+.skills-bubble-group {
+  align-items: center;
+  display: flex;
+  gap: $gap;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  > * {
+    flex-grow: 1;
+  }
+}
+
+@include mqMin($tabletSml) {
+  .skills-bubble-group {
+    flex-direction: row;
+
+    > * {
+      min-width: calc(50% - $gap);
+    }
+  }
+}
+
+@include mqMin($laptopSml) {
+  .skills-bubble-group > * {
+    min-width: 0;
+  }
+}
+
+@include mqMin($laptopLrg) {
+  .skills-bubble-group {
+    flex-direction: column;
+  }
+}
+
+@include mqMin($desktopMed) {
+  .skills-bubble-group > * {
+    min-width: calc(50% - $gap);
+  }
+}
+
+@include mqMin($desktopLrg) {
+  .skills-bubble-group {
+    flex-direction: row;
+  }
+
+  .skills-bubble-group > * {
+    min-width: calc(50% - $gap);
+  }
+}

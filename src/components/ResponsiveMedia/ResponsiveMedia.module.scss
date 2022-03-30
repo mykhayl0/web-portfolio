@@ -1,6 +1,27 @@
 @import "../../variables";
+@import "../../mixins";
 
 .box-shadow {
   -webkit-box-shadow: 10px -10px 0px 0px $brand-color__swatch-grey;
   box-shadow: 10px -10px 0px 0px $brand-color__swatch-grey;
+  max-width: 16rem;
+  transition: 0.4s max-width ease-in-out;
+}
+
+@include mqMin($mobileMed) {
+  .box-shadow {
+    max-width: 20rem;
+  }
+}
+
+@include mqMin($mobileLrg) {
+  .box-shadow {
+    max-width: 23.4375rem;
+  }
+}
+
+@include mqMin($tabletSml) {
+  .box-shadow {
+    max-width: 26.5625rem;
+  }
 }

@@ -1,27 +1,141 @@
 @import "../../variables";
+@import "../../mixins";
 
 .aboutpage-img-title-wrapper {
   position: relative;
-  text-align: end;
+  display: block;
   padding-right: 0.625rem;
   margin-bottom: $title-big-margins__mobile-small;
+  width: 100%;
+
+  .portrait {
+    display: block;
+    margin: 0 0 0 auto;
+    transition: 0.4s margin ease-in-out;
+
+    @include mqMin($tabletSml) {
+      margin: 50px auto 0 0;
+    }
+  }
 
   .title {
     position: absolute;
-    bottom: -2.4375rem;
+    bottom: -2.75rem;
     margin: 0;
+    transition: 0.4s font-size ease;
   }
+
+  @include mqMin($mobileMed) {
+    .title {
+      font-size: 6rem;
+      bottom: -3.25rem;
+    }
+  }
+
+  @include mqMin($tabletSml) {
+    .title {
+      font-size: 7rem;
+      top: -3.25rem;
+      right: 0;
+      margin-right: 10%;
+    }
+  }
+
+  @include mqMin($tabletLrg) {
+    .title {
+      font-size: 8rem;
+      margin-right: 30%;
+    }
+  }
+
+  @include mqMin($laptopSml) {
+    .title {
+      font-size: 9rem;
+      margin-right: 35%;
+    }
+  }
+
+  @include mqMin($laptopMed) {
+    .title {
+      margin-right: 40%;
+    }
+  }
+
+  @include mqMin($laptopLrg) {
+    .title {
+      margin-right: 45%;
+    }
+  }
+
+  @include mqMin($desktopMed) {
+    .title {
+      margin-right: 50%;
+    }
+  }
+
+  @include mqMin($desktopMed) {
+    .title {
+      margin-right: 60%;
+    }
+  }
+}
+
+.aboutpage__about-me.top {
+  text-transform: uppercase;
 }
 
 .aboutpage__about-me {
   color: $brand-color__swatch-lightgrey;
   font-weight: 300;
   font-size: $font-size-p__mobile;
+
   p {
     margin: 0 0 $content-breaks__mobile-small 0;
+    transition: 0.4s font-size ease;
+
+    @include mqMin($tabletSml) {
+      font-size: 1.5rem;
+    }
   }
 
   strong {
     font-weight: 700;
+  }
+}
+
+@include mqMin($laptopSml) {
+  .aboutpage__mid-wrapper {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .aboutpage__about-me.top p {
+    text-transform: uppercase;
+    margin-bottom: $content-breaks__mobile-small * 2;
+    font-weight: 800;
+    font-size: 1.75rem;
+  }
+}
+
+@include mqMin($laptopLrg) {
+  .aboutpage__about-me.top {
+    p {
+      font-size: 2rem;
+      margin-bottom: 6rem;
+    }
+  }
+}
+
+@include mqMin($desktopMed) {
+  .aboutpage__first-section {
+    width: 70%;
+  }
+
+  .aboutpage__second-section {
+    flex-grow: 1;
+
+    h3 {
+      text-align: center;
+    }
   }
 }

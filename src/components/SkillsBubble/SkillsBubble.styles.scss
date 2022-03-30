@@ -22,10 +22,6 @@
   display: flex;
   justify-content: center;
 
-  & + & {
-    margin-top: 10px;
-  }
-
   &.is-open,
   &.is-closing {
     padding: 110px 0;

@@ -1,5 +1,6 @@
 @import-normalize;
 @import "../../variables";
+@import "../../mixins";
 @import url("https://cdn.rawgit.com/lonekorean/gist-syntax-themes/848d6580/stylesheets/monokai.css");
 
 * {
@@ -13,4 +14,67 @@ body {
   padding: 0.75rem;
   margin: 0;
   overflow-x: hidden;
+  transition: 0.4s padding ease-in-out;
+}
+
+.app__flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+}
+
+@include mqMin($mobileMed) {
+  body {
+    padding: 1.25rem;
+  }
+}
+
+@include mqMin($mobileLrg) {
+  body {
+    padding: 1.5rem;
+  }
+}
+
+@include mqMin($tabletSml) {
+  body {
+    padding: 2.5rem;
+  }
+}
+
+@include mqMin($laptopSml) {
+  body {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@include mqMin($laptopMed) {
+  body {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@include mqMin($laptopLrg) {
+  body {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@include mqMin($desktopMed) {
+  body {
+    padding-left: 18.75rem;
+    padding-right: 18.75rem;
+  }
+}
+
+@include mqMin($desktopLrg) {
+  body {
+    padding-left: 25rem;
+    padding-right: 25rem;
+  }
 }

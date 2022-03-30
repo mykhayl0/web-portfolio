@@ -1,7 +1,23 @@
 @import "../../variables";
+@import "../../mixins";
 
 .work-tiles {
   display: flex;
   flex-direction: column;
   gap: $content-breaks__mobile-small;
+}
+
+@include mqMin($tabletSml) {
+  .work-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include mqMin($tabletLrg) {
+  .work-tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

@@ -1,4 +1,5 @@
 @import "../../variables";
+@import "../../mixins";
 
 form {
   background-color: $brand-color__swatch-lightgrey;
@@ -75,6 +76,84 @@ textarea {
 
 .contactpage__inputs-wrapper {
   padding: 2.5rem 1.25rem;
+  transition: 0.4s padding ease;
+}
+
+@include mqMin($mobileLrg) {
+  .contactpage__inputs-wrapper {
+    padding: 3rem 2rem;
+  }
+
+  .contactpage_title {
+    width: 40%;
+  }
+}
+
+@include mqMin($tabletSml) {
+  .contactpage__inputs-wrapper {
+    padding: 4rem 5rem;
+  }
+
+  .contactpage_title {
+    width: 30%;
+  }
+}
+
+@include mqMin($tabletLrg) {
+  .contactpage__inputs-wrapper {
+    padding: 4rem 5rem;
+  }
+
+  .contactpage__inputs-flex-desktop {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .contactpage_title {
+    width: 50%;
+  }
+}
+
+@include mqMin($laptopSml) {
+  .contactpage__inputs-wrapper {
+    padding: 5rem 6rem;
+  }
+}
+
+@include mqMin($laptopLrg) {
+  .contactpage__inputs-wrapper {
+    padding: 6rem 8rem;
+  }
+
+  .contactpage_title {
+    width: 40%;
+  }
+}
+
+@include mqMin($laptopLrg) {
+  .contactpage__inputs-wrapper {
+    padding: 5rem 10rem;
+  }
+}
+
+@include mqMin($desktopMed) {
+  .contactpage__inputs-wrapper {
+    padding: 6rem 12rem;
+  }
+
+  .contactpage__inputs-flex-desktop {
+    gap: 3rem;
+  }
+}
+
+@include mqMin($desktopLrg) {
+  .contactpage__inputs-wrapper {
+    padding: 8rem 15rem;
+  }
+
+  .contactpage__inputs-flex-desktop {
+    gap: 5rem;
+  }
 }
 
 .contactpage__intro-text {
@@ -82,6 +161,35 @@ textarea {
   font-size: $font-size-p__mobile;
   color: $brand-color__swatch-lightgrey;
   margin: 0 0 $content-breaks__mobile-small 0;
+  transition: 0.4s font-size ease;
+}
+
+@include mqMin($tabletSml) {
+  .contactpage__intro-text {
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+}
+
+@include mqMin($tabletLrg) {
+  .contactpage__intro-text {
+    font-weight: 800;
+    font-size: 1.7rem;
+  }
+}
+
+@include mqMin($laptopLrg) {
+  .contactpage__intro-text {
+    font-size: 2rem;
+    margin-bottom: 6rem;
+  }
+}
+
+@include mqMin($desktopLrg) {
+  .contactpage__intro-text {
+    font-weight: 800;
+    font-size: 3rem;
+  }
 }
 
 .contactpage__collab-text {

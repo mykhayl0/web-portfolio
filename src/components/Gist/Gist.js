@@ -3,6 +3,8 @@ import styles from "./Gist.module.scss";
 import { useEffect } from "react";
 import ReactGist from "react-gist";
 
+// Gist accepts the gist.github ID in order to render code examples for individual projects.
+// Because Gist comes prestyled, a new stylesheet is injected to override the default Gist styles.
 export default function Gist({ id }) {
   useEffect(
     function () {

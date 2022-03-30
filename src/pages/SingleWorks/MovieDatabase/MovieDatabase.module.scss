@@ -1,4 +1,5 @@
 @import "../../../variables";
+@import "../../../mixins";
 
 .movie-database-details {
   font-size: $font-size-p__mobile;
@@ -7,5 +8,27 @@
 
   p {
     margin: 0;
+    transition: 0.4s font-size ease;
+  }
+}
+
+@include mqMin($tabletSml) {
+  .movie-database-details p {
+    font-size: 1.5rem;
+  }
+}
+
+@include mqMin($laptopSml) {
+  .movie-database__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  .movie-database-details.first-section {
+    width: 30%;
+  }
+  .movie-database__second-section {
+    width: 60%;
   }
 }

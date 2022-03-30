@@ -7,6 +7,8 @@ import mykhayloLogo from "../../assets/mykhaylo-logo.svg";
 import linkedinIcon from "../../assets/icons/site-icons/linkedin-icon.svg";
 import githubIcon from "../../assets/icons/development-icons/github-icon.svg";
 
+// HeaderDesktop renders a header component for devices larger than 899px.
+// Contains Link components to enable user navigation, including GitHub and LinkedIn external links.
 export default function HeaderDesktop() {
   const { pathname } = useLocation();
 

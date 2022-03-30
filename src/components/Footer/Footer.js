@@ -8,6 +8,8 @@ import emailIcon from "../../assets/icons/site-icons/email-icon.svg";
 
 import { Link } from "react-router-dom";
 
+// Render a Footer component with GitHub, LinkedIn icons, including the Mykhaylo logo
+// and a copyright text.
 export default function Footer() {
   return (
     <footer>
